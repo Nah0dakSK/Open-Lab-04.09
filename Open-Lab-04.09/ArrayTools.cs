@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Open_Lab_04._09
 {
@@ -6,7 +7,10 @@ namespace Open_Lab_04._09
     {
         public string[] RemoveDups(string[] strings)
         {
-            throw new NotImplementedException();
+            HashSet<string> set = new HashSet<string>(strings);
+            string[] result = new string[set.Count];
+            set.CopyTo(result);
+            return result;
         }
     }
 }
